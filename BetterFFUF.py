@@ -1,6 +1,5 @@
 import os
 import time
-import keyboard
 import platform
 
 
@@ -28,24 +27,30 @@ def filter_fuzz():
     time.sleep(2)
     main_func()
 
+
 # Main Function Block
 def main_func():
     print(
-        "This is a basic fuzzer that uses ffuf but mitigates the amount of input you need in order to fuzz a web "
+        "BetterFFUF:\n"
+        "This is a basic fuzzer that uses ffuf but mitigates the amount of input you need\nin order to fuzz a web "
         "application or api.\nInclude FUZZ wherever necessary when prompted to specify the URL you are attacking.\n("
-        "EX: https://FUZZ.google.com/)")
-    print(f"What would you like to do?\n[1] Run a basic FUZZ scan.\n[2] Run a filtered scan.")
+        "EX: https://FUZZ.google.com/)\n")
+    print(f"What would you like to do?\n\n[1] Run a basic FUZZ scan.\n[2] Run a filtered scan.\n")
     # Choices
-    Scan_Q = input('')
+    while True:
 
+        Scan_Q = input("You can exit the application with the command 'exit'\nAwaiting Input: ")
+        if Scan_Q.lower() == 'exit':
+            print("Exiting the application..")
+            break
     # Function Index
-    if Scan_Q == '1':
-        basic_fuzz()
-    elif Scan_Q == '2':
-        filter_fuzz()
-    else:
-        time.sleep(2)
-        main_func()
+        elif Scan_Q == '1':
+            basic_fuzz()
+        elif Scan_Q == '2':
+            filter_fuzz()
+        else:
+            os.system("clear")
+            main_func()
 
-# Compiles and calls the program
+
 main_func()
