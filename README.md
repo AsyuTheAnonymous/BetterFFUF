@@ -7,3 +7,6 @@ Usage:
 Navigate to the BetterFFUF directory using the command line by running 'cd path/to/BetterFFUF'.
 Launch the program by entering 'python3 BetterFFUF.py'.
 The program will start, and you are ready to begin fuzzing. Please ensure that FFUF is installed on your system for BetterFFUF to function seamlessly."
+
+
+![BetterFFUF](https://github.com/AsyuTheAnonymous/BetterFFUF/assets/145869308/27bf4c77-abdc-4584-99b6-e98279241e70)
