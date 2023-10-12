@@ -1,12 +1,21 @@
-"BetterFFUF represents a significant enhancement to the widely used FFUF tool, specially designed to streamline the process of API and subdomain fuzzing. It was conceived to address the common frustration of manually specifying lengthy command-line arguments for FFUF. For example, having to repeatedly type a command like 'ffuf -u https://www.google.com/FUZZ -w /home/user/documents/wordlist/common.txt -p 1 -fc 200' can be cumbersome and time-consuming. While some users rely on their keyboard's up arrow to access previous commands, this approach may not be accessible to all individuals.
+BetterFFUF:
 
-BetterFFUF simplifies this process by providing a more user-friendly and efficient way to perform fuzzing. It offers a looping mechanism, allowing users to initiate the process once and subsequently iterate through fuzzing tasks without the need to recall the entire command. Exiting the program is made straightforward by simply using Ctrl + C, adding to the ease and convenience of the tool.
+1. Simplified Input: BetterFFUF streamlines the input process. It prompts the user for essential information, such as the target URL, the path to the wordlist, and the rate of requests. This means users don't have to remember the command-line options for ffuf, making it easier for both beginners and experienced users.
 
-Usage:
+2. Basic Fuzzing: It allows you to perform a basic fuzzing scan quickly. You just need to provide the target URL with a "FUZZ" placeholder, the wordlist, and the request rate. This is handy for discovering common vulnerabilities and weaknesses.
 
-Navigate to the BetterFFUF directory using the command line by running 'cd path/to/BetterFFUF'.
-Launch the program by entering 'python3 BetterFFUF.py'.
-The program will start, and you are ready to begin fuzzing. Please ensure that FFUF is installed on your system for BetterFFUF to function seamlessly."
+3. Filtered Scanning: For more advanced users, BetterFFUF supports filtered scanning. In addition to the basic inputs, you can specify the HTTP status codes to filter the results. This can be extremely valuable for targeting specific vulnerabilities or responses.
 
+4. User-Friendly Interface: The application provides a user-friendly menu, and it even offers an option to exit gracefully with the "exit" command. This makes it easy to manage and navigate through different scanning options.
 
-![BetterFFUF](https://github.com/AsyuTheAnonymous/BetterFFUF/assets/145869308/27bf4c77-abdc-4584-99b6-e98279241e70)
+5. Clear Screen: The application automatically clears the terminal screen, maintaining a neat and organized workspace, which is essential for clarity during bug hunting.
+
+6. Fast Execution: BetterFFUF is designed to be efficient and fast, as it immediately starts the scan using the ffuf tool, saving you time and effort.
+
+7. Educational: For those new to ethical hacking and bug hunting, the comments within the code explain what each section does, which can serve as an educational resource.
+
+8. Rapid Transition: After each scan, the application returns to the main menu with a brief pause, ensuring a smooth and rapid transition to the next task.
+
+9. Enhanced Productivity: By automating some of the tasks and simplifying the input, BetterFFUF enhances the productivity of bug bounty hunters. They can focus on finding vulnerabilities and not get bogged down in the command-line details.
+
+In summary, BetterFFUF is a valuable tool for bug bounty hunters and security professionals who want to streamline their fuzzing activities, discover vulnerabilities, and do so with ease. Its user-friendly interface, efficient execution, and educational comments make it a must-have in the toolkit of those looking to secure web applications and APIs effectively.
